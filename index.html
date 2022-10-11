@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <style>
       * {
         margin: 0;
@@ -12,10 +17,10 @@
         box-sizing: border-box;
       }
 
-      body {
+      /* body {
         background: #000;
         color: #fff;
-      }
+      } */
 
       .container {
         padding-right: 15px;
@@ -24,17 +29,75 @@
         margin-left: auto;
       }
 
-      .section__container {
+      .s1__container {
         display: flex;
         justify-content: space-between;
       }
 
-      .section__element {
+      .s1__left,
+      .s1__right {
         flex: 1;
       }
 
-      .social_media_icons {
-        color: #fff;
+      .s1__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .s1__right > div {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        background: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .social_media_icons > i {
+        color: red;
+      }
+
+      /* .section__divider {
+        display: flex;
+      } */
+
+      .s2__grid__container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: auto auto auto auto;
+        padding: 10px;
+      }
+      .s2__grid__item {
+        background: green;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .s3__container {
+        background: cyan;
+      }
+
+      .s4__grid__container {
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        grid-template-columns: auto auto auto auto auto;
+        padding: 10px;
+      }
+
+      .s4__grid__item {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: green;
+        /* padding: 20px; */
+        width: 6rem;
+        height: 6rem;
+        text-align: center;
       }
 
       @media (min-width: 768px) {
@@ -55,10 +118,10 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <section>
-        <div class="section__container">
-          <div class="section__element">
+    <div>
+      <section class="container">
+        <div class="s1__container">
+          <div class="s1__left">
             <h1>Title goes here</h1>
             <h2>Sub­title goes here</h2>
             <p>
@@ -70,12 +133,54 @@
               asperiores minima sed aperiam tempora, sequi officia neque.
             </p>
             <div class="social_media_icons">
-              <i class="fas fa-cloud"></i>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+              <i class="fa fa-google-plus"></i>
             </div>
           </div>
-          <div class="section__element">Right</div>
+          <div class="s1__right">
+            <div>Test</div>
+          </div>
         </div>
       </section>
+      <!-- <div class="section__divider">
+        <hr />
+        <i class="fa fa-facebook"></i>
+        <hr />
+      </div> -->
     </div>
+    <section class="container">
+      <div class="s2__grid__container">
+        <div class="s2__grid__item">1</div>
+        <div class="s2__grid__item">2</div>
+        <div class="s2__grid__item">3</div>
+        <div class="s2__grid__item">4</div>
+      </div>
+    </section>
+
+    <div class="s3__container">
+      <section class="container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum
+          officiis in cum saepe a earum. Deserunt ipsa ratione exercitationem
+          enim delectus numquam, tenetur minima quasi, repudiandae sunt
+          aspernatur repellat commodi voluptatum autem maxime aut nisi. Autem
+          ducimus nostrum perferendis iusto dolorum at omnis accusantium
+          corrupti accusamus cupiditate. Vel, consequuntur.
+        </p>
+      </section>
+    </div>
+
+    <section class="container">
+      <div class="s4__grid__container">
+        <div class="s4__grid__item">1</div>
+        <div class="s4__grid__item">2</div>
+        <div class="s4__grid__item">3</div>
+        <div class="s4__grid__item">4</div>
+        <div class="s4__grid__item">5</div>
+      </div>
+    </section>
   </body>
 </html>
