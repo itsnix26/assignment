@@ -89,7 +89,7 @@
       }
 
       .s4__grid__item {
-        display: grid;
+        display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
@@ -98,6 +98,29 @@
         width: 6rem;
         height: 6rem;
         text-align: center;
+      }
+
+      .s5__container {
+        display: flex;
+      }
+
+      .s5__container > ul:nth-child(1) {
+        width: 30%;
+      }
+
+      .s5__container > ul:nth-child(2) {
+        width: 30%;
+      }
+
+      .s5__container > ul:nth-child(3) {
+        width: 30%;
+      }
+
+      .s6__grid__container {
+        display: grid;
+        align-items: center;
+        justify-content: start;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       }
 
       @media (min-width: 768px) {
@@ -180,6 +203,39 @@
         <div class="s4__grid__item">3</div>
         <div class="s4__grid__item">4</div>
         <div class="s4__grid__item">5</div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="s5__container">
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+          <li>Five</li>
+        </ul>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+          <li>Five</li>
+        </ul>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+          <li>Five</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="s6__grid__container">
+        <div class="s6__grid__item">1</div>
+        <div class="s6__grid__item">2</div>
       </div>
     </section>
   </body>
