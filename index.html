@@ -17,10 +17,10 @@
         box-sizing: border-box;
       }
 
-      /* body {
+      body {
         background: #000;
         color: #fff;
-      } */
+      }
 
       .container {
         padding-right: 15px;
@@ -29,14 +29,30 @@
         margin-left: auto;
       }
 
+      .s1__container,
+      .s2__grid__container,
+      .s3__container,
+      .s4__grid__container,
+      .s5__container,
+      .s6__grid__container {
+        padding: 5rem 0;
+      }
+
       .s1__container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
       }
 
       .s1__left,
       .s1__right {
         flex: 1;
+      }
+
+      .s1__left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
 
       .s1__right {
@@ -47,8 +63,9 @@
 
       .s1__right > div {
         border-radius: 50%;
-        width: 10rem;
-        height: 10rem;
+
+        aspect-ratio: 1/1;
+        height: 100%;
         background: red;
         display: flex;
         align-items: center;
@@ -59,12 +76,20 @@
         color: red;
       }
 
-      /* .section__divider {
+      .section__divider {
         display: flex;
-      } */
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hr__left,
+      .hr__right {
+        width: 48%;
+      }
 
       .s2__grid__container {
         display: grid;
+        margin: 5rem 0;
         gap: 1rem;
         grid-template-columns: auto auto auto auto;
         padding: 10px;
@@ -80,6 +105,7 @@
       }
 
       .s4__grid__container {
+        margin: 5rem 0;
         display: grid;
         align-items: center;
         justify-content: space-around;
@@ -145,8 +171,10 @@
       <section class="container">
         <div class="s1__container">
           <div class="s1__left">
-            <h1>Title goes here</h1>
-            <h2>Sub­title goes here</h2>
+            <div>
+              <h1>Title goes here</h1>
+              <h2>Sub­title goes here</h2>
+            </div>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Consequuntur ipsum quia, perferendis ducimus aliquid earum dolorem
@@ -168,11 +196,11 @@
           </div>
         </div>
       </section>
-      <!-- <div class="section__divider">
-        <hr />
+      <div class="section__divider">
+        <hr class="hr__left" />
         <i class="fa fa-facebook"></i>
-        <hr />
-      </div> -->
+        <hr class="hr__right" />
+      </div>
     </div>
     <section class="container">
       <div class="s2__grid__container">
