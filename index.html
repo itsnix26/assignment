@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/fe6e818497.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://kit.fontawesome.com/fe6e818497.js"
+      crossorigin="anonymous"
+    ></script>
 
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        scroll-behavior: smooth;
+                transition: 0.2s ease-in;
+
       }
+
+      /* ul {
+        margin-left: 1rem;
+      } */
 
       body {
         background: #000;
         color: #fff;
+
+        font-family: Arial, Helvetica, sans-serif;
       }
 
       .container {
@@ -30,7 +47,7 @@
       }
 
       .common__section__padding {
-        padding: 5rem 0;
+        margin: 6rem 0;
       }
 
       .s1__container {
@@ -41,40 +58,133 @@
 
       .s1__left,
       .s1__right {
-        flex: 1;
+        width: 50%;
       }
 
       .s1__left {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        justify-content: center;
+
+        gap: 2.5rem;
+      }
+
+      .s1__left > p {
+        font-size: 18px;
+        color: darkgray;
+        line-height: 1.2;
+        width: 80%;
       }
 
       .s1__right {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
       }
 
       .s1__right > div {
         border-radius: 50%;
 
-        aspect-ratio: 1/1;
-        height: 100%;
-        background: red;
+        /* aspect-ratio: 1/1; */
+        height: 25rem;
+        width: 25rem;
+        background-image: linear-gradient(
+          180deg,
+          rgb(5, 168, 168),
+          rgb(85, 84, 84)
+        );
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .social_media_icons > i {
-        color: red;
+      /* .s1__left__headings {
+        font-weight: 400 !important;
+      } */
+
+      .s1__left__headings > h1 {
+        font-size: 28px;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      .s1__left__headings > h2 {
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .s1__right__animation {
+        font-size: 1.5rem;
+      }
+
+      .s1__right__animation > p {
+        background-image: linear-gradient(
+          -225deg,
+          #231557 0%,
+          #44107a 29%,
+          #ff1361 67%,
+          #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        /* font-size: 190px; */
+      }
+
+      @keyframes textclip {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      .social_media_icons {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .social_media_icons > a {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      .social_media_icons > a:hover {
+        color: blue;
+        transform: scale(1.2);
       }
 
       .section__divider {
         display: flex;
         justify-content: space-between;
         align-items: center;
+      }
+
+      .section__divider > i {
+        color: red;
+      }
+
+      .chevrons__icon > a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+
+      .chevrons__icon > a:hover {
+        transform: translateY(5px);
+      }
+
+      .chevrons__icon > a > i:nth-child(1) {
+        margin-bottom: -0.5rem;
       }
 
       .hr__left,
@@ -92,24 +202,48 @@
         align-items: center;
         justify-content: center;
         background: green;
-        padding: 2rem;
-        height: 15rem;
+        padding: 3rem;
+        height: 22rem;
         text-align: left;
+        cursor: pointer;
+      }
+
+      .s2__grid__item:hover {
+        background: lightgreen;
+        color: gray;
       }
 
       .s3__container {
         background: darkcyan;
       }
 
+      .s3__text {
+        padding: 4rem 0;
+        font-size: 1.4rem;
+      }
+
+      .s3__wrapper > h3 {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+
+      .s4__wrapper > h4 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+
       .s4__grid__container {
         display: grid;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         gap: 1rem;
         grid-template-columns: auto auto auto auto auto;
       }
 
       .s4__grid__item {
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -118,8 +252,8 @@
         background: #fff;
         color: #000;
         /* padding: 20px; */
-        width: 6rem;
-        height: 6rem;
+        width: 9rem;
+        height: 9rem;
         text-align: center;
       }
 
@@ -139,11 +273,40 @@
         width: 30%;
       }
 
+      .s5__container > ul {
+        font-size: 1.2rem;
+      }
+
+      .s5__container > ul > li {
+        margin-bottom: 0.8rem;
+        list-style: none;
+        /* font-size: 20px; */
+      }
+
+      .s5__container > ul > li:before {
+        content: "•";
+        font-size: 40px;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        line-height: 20px;
+      }
+
       .s6__grid__container {
         display: grid;
         align-items: center;
         justify-content: start;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .s6__grid__item {
+        font-size: 1.2rem;
+      }
+
+      .s6__grid__item > img {
+        width: 10rem;
+        height: 12rem;
+        margin-bottom: 1rem;
+        object-fit: contain;
       }
 
       @media (min-width: 768px) {
@@ -158,7 +321,65 @@
       }
       @media (min-width: 1200px) {
         .container {
-          width: 1170px;
+          width: 1330px;
+        }
+      }
+
+      @media screen and (max-width: 998px) {
+        .s1__left,
+        .s1__right {
+          width: 100%;
+        }
+        .s1__container {
+          flex-direction: column;
+          gap: 3rem;
+        }
+
+        .s1__left > p {
+          width: 100%;
+        }
+
+        .s1__right > div {
+          width: 20rem;
+          height: 20rem;
+        }
+
+        .hr__left,
+        .hr__right {
+          width: 45%;
+        }
+
+        .s2__grid__container {
+          grid-template-columns: auto auto;
+        }
+
+        .s2__grid__container {
+          gap: 1rem;
+        }
+
+        .s4__grid__container {
+          grid-template-columns: auto auto;
+        }
+
+        .s5__container {
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+
+        .s5__container > ul:nth-child(1) {
+          width: 100%;
+        }
+
+        .s5__container > ul:nth-child(2) {
+          width: 100%;
+        }
+
+        .s5__container > ul:nth-child(3) {
+          width: 100%;
+        }
+
+        .s6__grid__container {
+          gap: 1rem;
         }
       }
     </style>
@@ -168,57 +389,80 @@
       <section class="container">
         <div class="s1__container common__section__padding">
           <div class="s1__left">
-            <div>
+            <div class="s1__left__headings">
               <h1>Title goes here</h1>
               <h2>Sub­title goes here</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Consequuntur ipsum quia, perferendis ducimus aliquid earum dolorem
-              accusamus minus quos pariatur blanditiis sit libero expedita
-              maiores dolore vero architecto, enim eius eveniet reprehenderit
-              labore, quam a eum. Omnis aut, odit maiores corporis est
-              asperiores minima sed aperiam tempora, sequi officia neque.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui o cia deserunt mollit anim id est laborum.
             </p>
             <div class="social_media_icons">
-              <i class="fa fa-facebook"></i>
-              <i class="fa fa-instagram"></i>
-              <i class="fa fa-twitter"></i>
-              <i class="fa fa-linkedin"></i>
-              <i class="fa fa-google-plus"></i>
+              <a target="_blank" href="https://www.facebook.com/"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://www.instagram.com/"
+                ><i class="fa fa-instagram"></i
+              ></a>
+              <a target="_blank" href="https://www.twitter.com/"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+              <a target="_blank" href="https://www.google.com/"
+                ><i class="fa fa-google-plus"></i
+              ></a>
             </div>
           </div>
           <div class="s1__right">
-            <div>Test</div>
+            <div class="s1__right__animation">
+              <p>
+                Placeholder <br />
+                for animation
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <div class="section__divider">
         <hr class="hr__left" />
-        <i class="fa fa-facebook"></i>
+        <div class="chevrons__icon">
+          <a href="#keyContact"
+            ><i class="fa fa-chevron-down"></i>
+            <i class="fa fa-chevron-down"></i
+          ></a>
+        </div>
         <hr class="hr__right" />
       </div>
     </div>
-    <section class="container common__section__padding">
-      <div class="s2__grid__container">
-        <div class="s2__grid__item">
-          Click to open a pop­up and change color on hover
-        </div>
-        <div class="s2__grid__item">
-          Click to open a pop­up and change color on hover
-        </div>
-        <div class="s2__grid__item">
-          Click to open a pop­up and change color on hover
-        </div>
-        <div class="s2__grid__item">
-          Click to open a pop­up and change color on hover
+    <section class="container">
+      <div class="common__section__padding">
+        <div class="s2__grid__container">
+          <div onClick="alert('alert popup');" class="s2__grid__item">
+            Click to open a pop­up and change color on hover
+          </div>
+          <div onClick="alert('alert popup');" class="s2__grid__item">
+            Click to open a pop­up and change color on hover
+          </div>
+          <div onClick="alert('alert popup');" class="s2__grid__item">
+            Click to open a pop­up and change color on hover
+          </div>
+          <div onClick="alert('alert popup');" class="s2__grid__item">
+            Click to open a pop­up and change color on hover
+          </div>
         </div>
       </div>
     </section>
 
     <div class="s3__container common__section__padding">
       <section class="container">
-        <p>
+        <p class="s3__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum
           officiis in cum saepe a earum. Deserunt ipsa ratione exercitationem
           enim delectus numquam, tenetur minima quasi, repudiandae sunt
@@ -229,8 +473,8 @@
       </section>
     </div>
 
-    <section class="container common__section__padding">
-      <div class="s4__grid__container">
+    <section class="container">
+      <div class="s4__grid__container common__section__padding">
         <div class="s4__grid__item">icon</div>
         <div class="s4__grid__item">icon</div>
         <div class="s4__grid__item">icon</div>
@@ -239,38 +483,52 @@
       </div>
     </section>
 
-    <section class="container common__section__padding">
-      <h3>Heading</h3>
-      <div class="s5__container">
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
-        </ul>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
-        </ul>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
-        </ul>
+    <section class="container">
+      <div class="s3__wrapper common__section__padding">
+        <h3>Heading</h3>
+        <div class="s5__container">
+          <ul>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+          </ul>
+          <ul>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+          </ul>
+          <ul>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+            <li>Sentence text goes here</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="container common__section__padding">
-      <h4>Key Contacts</h4>
-      <div class="s6__grid__container">
-        <div class="s6__grid__item">1</div>
-        <div class="s6__grid__item">2</div>
+    <section id="keyContact" class="container">
+      <div class="s4__wrapper common__section__padding">
+        <h4>Key Contacts</h4>
+        <div class="s6__grid__container">
+          <div class="s6__grid__item">
+            <img src="./assets//images//user.png" alt="" srcset="" />
+            <p>Name</p>
+            <p>Job Title</p>
+            <p>Email hyperlink</p>
+          </div>
+          <div class="s6__grid__item">
+            <img src="./assets//images//user.png" alt="" srcset="" />
+            <p>Name</p>
+            <p>Job Title</p>
+            <p>Email hyperlink</p>
+          </div>
+        </div>
       </div>
     </section>
   </body>
